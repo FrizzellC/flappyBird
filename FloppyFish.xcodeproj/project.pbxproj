@@ -15,6 +15,11 @@
 		13AAEFF919FA061E00B5160E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13AAEFF819FA061E00B5160E /* Images.xcassets */; };
 		13AAEFFC19FA061E00B5160E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13AAEFFA19FA061E00B5160E /* LaunchScreen.xib */; };
 		13AAF00819FA061F00B5160E /* FloppyFishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AAF00719FA061F00B5160E /* FloppyFishTests.swift */; };
+		13AAF01719FA08C300B5160E /* bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AAF01219FA08C300B5160E /* bird1.png */; };
+		13AAF01819FA08C300B5160E /* bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AAF01319FA08C300B5160E /* bird2.png */; };
+		13AAF01919FA08C300B5160E /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AAF01419FA08C300B5160E /* ground.png */; };
+		13AAF01A19FA08C300B5160E /* pipeDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AAF01519FA08C300B5160E /* pipeDown.png */; };
+		13AAF01B19FA08C300B5160E /* pipeUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AAF01619FA08C300B5160E /* pipeUp.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,11 @@
 		13AAF00119FA061F00B5160E /* FloppyFishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloppyFishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13AAF00619FA061F00B5160E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13AAF00719FA061F00B5160E /* FloppyFishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloppyFishTests.swift; sourceTree = "<group>"; };
+		13AAF01219FA08C300B5160E /* bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird1.png; sourceTree = "<group>"; };
+		13AAF01319FA08C300B5160E /* bird2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird2.png; sourceTree = "<group>"; };
+		13AAF01419FA08C300B5160E /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
+		13AAF01519FA08C300B5160E /* pipeDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipeDown.png; sourceTree = "<group>"; };
+		13AAF01619FA08C300B5160E /* pipeUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipeUp.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,7 @@
 				13AAEFED19FA061E00B5160E /* AppDelegate.swift */,
 				13AAEFEF19FA061E00B5160E /* GameScene.sks */,
 				13AAEFF119FA061E00B5160E /* GameScene.swift */,
+				13AAF01119FA08C300B5160E /* flappyBird */,
 				13AAEFF319FA061E00B5160E /* GameViewController.swift */,
 				13AAEFF519FA061E00B5160E /* Main.storyboard */,
 				13AAEFF819FA061E00B5160E /* Images.xcassets */,
@@ -116,6 +127,19 @@
 				13AAF00619FA061F00B5160E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13AAF01119FA08C300B5160E /* flappyBird */ = {
+			isa = PBXGroup;
+			children = (
+				13AAF01219FA08C300B5160E /* bird1.png */,
+				13AAF01319FA08C300B5160E /* bird2.png */,
+				13AAF01419FA08C300B5160E /* ground.png */,
+				13AAF01519FA08C300B5160E /* pipeDown.png */,
+				13AAF01619FA08C300B5160E /* pipeUp.png */,
+			);
+			name = flappyBird;
+			path = ../../../Documents/flappyBird;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +191,7 @@
 				TargetAttributes = {
 					13AAEFE719FA061E00B5160E = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = E66F3JSD62;
 					};
 					13AAF00019FA061F00B5160E = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -198,10 +223,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13AAF01B19FA08C300B5160E /* pipeUp.png in Resources */,
+				13AAF01719FA08C300B5160E /* bird1.png in Resources */,
 				13AAEFFC19FA061E00B5160E /* LaunchScreen.xib in Resources */,
+				13AAF01919FA08C300B5160E /* ground.png in Resources */,
 				13AAEFF919FA061E00B5160E /* Images.xcassets in Resources */,
 				13AAEFF019FA061E00B5160E /* GameScene.sks in Resources */,
+				13AAF01A19FA08C300B5160E /* pipeDown.png in Resources */,
 				13AAEFF719FA061E00B5160E /* Main.storyboard in Resources */,
+				13AAF01819FA08C300B5160E /* bird2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,9 +374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FloppyFish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FloppyFish;
 			};
 			name = Debug;
 		};
@@ -354,9 +385,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FloppyFish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FloppyFish;
 			};
 			name = Release;
 		};
@@ -374,7 +406,7 @@
 				);
 				INFOPLIST_FILE = FloppyFishTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FloppyFishTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloppyFish.app/FloppyFish";
 			};
 			name = Debug;
@@ -389,7 +421,7 @@
 				);
 				INFOPLIST_FILE = FloppyFishTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FloppyFishTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloppyFish.app/FloppyFish";
 			};
 			name = Release;
@@ -413,6 +445,7 @@
 				13AAF00D19FA061F00B5160E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13AAF00E19FA061F00B5160E /* Build configuration list for PBXNativeTarget "FloppyFishTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +454,7 @@
 				13AAF01019FA061F00B5160E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
